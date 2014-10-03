@@ -1,0 +1,157 @@
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=0cm, text margin right=0cm}
+\usepackage{tcolorbox}
+    \tcbuselibrary{skins}
+\usepackage{ocgx}
+
+\definecolor{alleghenygold}{HTML}{FEDA48}
+\definecolor{alleghenyblue}{HTML}{002144}
+
+\newtcolorbox{InnerSubjectBox}{
+    enhanced,
+    nobeforeafter,
+    arc=0pt,
+    width=.2\paperwidth,
+    height=1cm,
+    boxrule=.4pt,
+    colframe=white,
+    center upper,
+    size=fbox,
+    interior style={
+        top color=alleghenyblue,
+        bottom color=alleghenyblue!95
+    },
+    colupper=white,
+}
+
+\newcommand{\subjects}[5]{×
+    \begin{InnerSubjectBox}%
+		\vspace*{.18cm}        
+        #1%
+    \end{InnerSubjectBox}%
+    \begin{InnerSubjectBox}%
+        \vspace*{.18cm}
+        #2%
+    \end{InnerSubjectBox}%
+    \begin{InnerSubjectBox}%
+        \vspace*{.18cm}
+        #3%
+    \end{InnerSubjectBox}%
+    \begin{InnerSubjectBox}%
+        \vspace*{.18cm}
+        #4%
+    \end{InnerSubjectBox}%
+    \begin{InnerSubjectBox}%
+        \vspace*{.18cm}
+        #5%
+    \end{InnerSubjectBox}%
+}
+
+\newtcolorbox{InnerPrizeBox}{
+    enhanced,
+    nobeforeafter,
+    arc=0pt,
+    width=.2\paperwidth,
+    boxrule=.4pt,
+    colframe=white,
+    center upper,
+    interior style={
+        top color=alleghenyblue,
+        bottom color=alleghenyblue!95
+    },
+    colupper=alleghenygold,
+    valign=center,
+    fontupper=\LARGE\bfseries,
+    height=.176\paperheight
+}
+
+\newcommand{\prizes}{%
+    \foreach \i in {1,2,...,5}{%
+        \begin{InnerPrizeBox}%
+            \begin{ocg}{s\i-100}{s\i-100}{1}{\hyperlink{s\i-100}{100}}\end{ocg}
+        \end{InnerPrizeBox}%
+        }%
+
+    \foreach \i in {1,2,...,5}{%
+        \begin{InnerPrizeBox}%
+            \begin{ocg}{s\i-200}{s\i-200}{1}{\hyperlink{s\i-200}{200}}\end{ocg}
+        \end{InnerPrizeBox}%
+        }%
+
+    \foreach \i in {1,2,...,5}{%
+        \begin{InnerPrizeBox}%
+            \begin{ocg}{s\i-300}{s\i-300}{1}{\hyperlink{s\i-300}{300}}\end{ocg}
+        \end{InnerPrizeBox}%
+        }%
+
+    \foreach \i in {1,2,...,5}{%
+        \begin{InnerPrizeBox}%
+            \begin{ocg}{s\i-400}{s\i-400}{1}{\hyperlink{s\i-400}{400}}\end{ocg}
+        \end{InnerPrizeBox}%
+        }%
+
+    \foreach \i in {1,2,...,5}{%
+        \begin{InnerPrizeBox}%
+            \begin{ocg}{s\i-500}{s\i-500}{1}{\hyperlink{s\i-500}{500}}\end{ocg}
+        \end{InnerPrizeBox}%
+        }%
+    }
+
+\newtcolorbox{QuestionHeadFoot}[1][]{
+    enhanced,
+    before=\vskip-.7ex,
+    after=,
+    arc=0pt,
+    width=\paperwidth,
+    boxrule=.4pt,
+    colframe=white,
+    center upper,
+    center lower,
+   size = fbox,
+    interior style={
+        top color=alleghenyblue,
+        bottom color=alleghenyblue!95
+    },
+    colupper=white,
+    collower=white,
+    valign=center,
+    fontupper=\LARGE\bfseries,
+    fontlower=\LARGE\bfseries,
+    height=.176\paperheight,
+    sidebyside,
+    segmentation style={white,solid,line width=.4pt},
+    #1
+}
+
+\newcommand{\header}[2]{
+    \begin{QuestionHeadFoot}
+        #1 \tcblower #2
+    \end{QuestionHeadFoot}
+}
+
+\newcommand{\footer}[1]{
+    \begin{QuestionHeadFoot}[before=\vskip-2.7ex]
+        \hyperlink{question#1}{Answer} \\ \hyperlink{answer#1}{Question} \tcblower
+        \hideocg{#1}{Done!} \\ \hyperlink{home}{Home}
+    \end{QuestionHeadFoot}
+}
+
+\newcommand{\content}[4]{
+\begin{frame}
+    \hypertarget<1>{answer#1}{}
+    \hypertarget<2>{question#1}{}
+    \hypertarget{#1}{}
+    \header{#2}{#3}
+  #4
+    \footer{#1}
+\end{frame}
+}
+
+\newtcolorbox{textarea}[1][]{
+    nobeforeafter,
+    height=6.2cm,
+    boxrule=0pt,
+    center upper,
+    valign=center,
+    #1
+}

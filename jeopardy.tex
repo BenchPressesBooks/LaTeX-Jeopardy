@@ -1,0 +1,387 @@
+% LaTeX Jeopardy Game
+% by Braden Licastro
+% 2 Oct 2014
+%
+% A modification of beamer latex template by DCMST
+% on StackExchange for Tex.
+%
+% NOTES:
+%  This game must be compiled using PDFLaTeX
+%  This game only be played in Adobe Reader due to the javascript links (ocgx)
+%  You must only use the mouse to click the buttons, any other interaction breaks the game
+%  You must hide the prize before going home due to LaTeX limitations
+%  You must have fun, or else.
+
+\NeedsTeXFormat{LaTeX2e}
+\documentclass{beamer}
+\usepackage[]{autojeopardy} % Accepts no parameters
+
+\usepackage{amssymb} % Math symbols
+
+\begin{document}
+\begin{frame}
+\hypertarget{home}{}
+\vspace*{-.5cm}
+    \subjects{Logic}{Professors}{The Major}{Calculus I}{``Category 5''}
+    \prizes
+\end{frame}
+
+% Section 1 Question 100
+\content                       % 4 arguments
+    {s1-100}                     % question internal identifier
+    {Logic}                          % subject number
+    {100 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            I am an odd number. Take away one letter and I become even. What number am I?
+        }
+        \only<2>{
+            Seven. (Take away the `s' and it becomes `even')
+        }
+        \end{textarea}
+    }
+% Section 1 Question 200
+\content
+    {s1-200}                     % question internal identifier
+    {Logic}                          % subject number
+    {200 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Logic Question 2?
+        }
+        \only<2>{
+            Logic question 2 answer.
+        }
+        \end{textarea}
+    }
+% Section 1 Question 300
+\content
+    {s1-300}                     % question internal identifier
+    {Logic}                          % subject number
+    {300 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Logic question 3?
+        }
+        \only<2>{
+            Logic question 3 answer.
+        }
+        \end{textarea}
+    }
+% Section 1 Question 400
+\content
+    {s1-400}                     % question internal identifier
+    {Logic}                          % subject number
+    {400 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Logic question 4?
+        }
+        \only<2>{
+            Logic question 4 answer.
+        }
+        \end{textarea}
+    }
+% Section 1 Question 500
+\content
+    {s1-500}                     % question internal identifier
+    {Logic}                          % subject number
+    {500 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Logic question 5?
+        }
+        \only<2>{
+            Logic question 5 answer.
+        }
+        \end{textarea}
+    }
+
+
+% Section 2 Question 100
+\content
+    {s2-100}                     % question internal identifier
+    {Professors}                          % subject number
+    {100 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Who is the current Department Chair?
+        }
+        \only<2>{
+            Professor Lakins.
+        }
+        \end{textarea}
+    }
+% Section 2 Question 200
+\content
+    {s2-200}                     % question internal identifier
+    {Professors}                          % subject number
+    {200 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Who is the Actuarial Adviser and has a PHD from Yale?
+        }
+        \only<2>{
+            Dr. LoBello.
+        }
+        \end{textarea}
+    }
+% Section 2 Question 300
+\content
+    {s2-300}                     % question internal identifier
+    {Professors}                          % subject number
+    {300 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Who is the Engineering Adviser?
+        }
+        \only<2>{
+            Professor Weir.
+        }
+        \end{textarea}
+    }
+% Section 2 Question 400
+\content
+    {s2-400}                     % question internal identifier
+    {Professors}                          % subject number
+    {400 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Who is the Dimensions Club Adviser?
+        }
+        \only<2>{
+            Professor Werner.
+        }
+        \end{textarea}
+    }
+% Section 2 Question 500
+\content
+    {s2-500}                     % question internal identifier
+    {Professors}                          % subject number
+    {500 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Who is the $\pi \mu \epsilon$ Adviser?
+        }
+        \only<2>{
+            Professor Carswell.
+        }
+        \end{textarea}
+    }
+    
+
+% Section 3 Question 100
+\content
+    {s3-100}                     % question internal identifier
+    {The Major}                          % subject number
+    {100 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            What division is Mathematics?
+        }
+        \only<2>{
+            Natural Science.
+        }
+        \end{textarea}
+    }
+% Section 3 Question 200
+\content
+    {s3-200}                     % question internal identifier
+    {The Major}                          % subject number
+    {200 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            How many credits are required for the Math Major at Allegheny?
+        }
+        \only<2>{
+            43.
+        }
+        \end{textarea}
+    }
+% Section 3 Question 300
+\content
+    {s3-300}                     % question internal identifier
+    {The Major}                          % subject number
+    {300 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            How many credits are required for a Minor at Allegheny?
+        }
+        \only<2>{
+            24.
+        }
+        \end{textarea}
+    }
+% Section 3 Question 400
+\content
+    {s3-400}                     % question internal identifier
+    {The Major}                          % subject number
+    {400 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            What are the required 300 level courses for a Math Major?
+        }
+        \only<2>{
+            Hell if I know, I'm just a computer scientist!
+        }
+        \end{textarea}
+    }
+% Section 3 Question 500
+\content
+    {s3-500}                     % question internal identifier
+    {The Major}                          % subject number
+    {500 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Name the 400 level courses.
+        }
+        \only<2>{
+            Again, how should I know this?!?
+        }
+        \end{textarea}
+    }
+
+
+% Section 4 Question 100
+\content
+    {s4-100}                     % question internal identifier
+    {Calculus I}                         % subject number
+    {100 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Derivative \#1?
+        }
+        \only<2>{
+            Derivative \#1 Answer.
+        }
+        \end{textarea}
+    }
+% Section 4 Question 200
+\content
+    {s4-200}                     % question internal identifier
+    {Calculus I}                         % subject number
+    {200 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Integral \#1?
+        }
+        \only<2>{
+            Integral \#1 Answer.
+        }
+        \end{textarea}
+    }
+% Section 4 Question 300
+\content
+    {s4-300}                     % question internal identifier
+    {Calculus I}                         % subject number
+    {300 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Limit?
+        }
+        \only<2>{
+            Limit Answer.
+        }
+        \end{textarea}
+    }
+% Section 4 Question 400
+\content
+    {s4-400}                     % question internal identifier
+    {Calculus I}                         % subject number
+    {400 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Derivative \#2?
+        }
+        \only<2>{
+            Derivative \#2 Answer.
+        }
+        \end{textarea}
+    }
+% Section 4 Question 500
+\content
+    {s4-500}                     % question internal identifier
+    {Calculus I}                         % subject number
+    {500 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Integral \#2?
+        }
+        \only<2>{
+            Integral \#2 Answer.
+        }
+        \end{textarea}
+    }
+
+
+% Section 5 Question 100
+\content
+    {s5-100}                     % question internal identifier
+    {``Category 5''}                         % subject number
+    {100 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            In what year was the college founded?
+        }
+        \only<2>{
+            1815 (A.D.)
+        }
+        \end{textarea}
+    }
+% Section 5 Question 200
+\content
+    {s5-200}                     % question internal identifier
+    {``Category 5''}                         % subject number
+    {200 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            What course level is the Junior Seminar?
+        }
+        \only<2>{
+            500 level.
+        }
+        \end{textarea}
+    }
+% Section 5 Question 300
+\content
+    {s5-300}                     % question internal identifier
+    {``Category 5''}                         % subject number
+    {300 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            What is the 6th Fibonacci number?
+        }
+        \only<2>{
+            $5$.
+        }
+        \end{textarea}
+    }
+% Section 5 Question 400
+\content
+    {s5-400}                     % question internal identifier
+    {``Category 5''}                         % subject number
+    {400 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            Solve: $\left \{\forall x\in \mathbb{Z}\right \}\left \{\frac{x+((x+1)+9))}{2}-x =\  ?\right \}$
+        }
+        \only<2>{
+            $5$.
+        }
+        \end{textarea}
+    }
+% Section 5 Question 500
+\content
+    {s5-500}                     % question internal identifier
+    {``Category 5''}                         % subject number
+    {500 POINTS}{                       % question prize
+        \begin{textarea}[]         % question/answer content
+        \only<1>{
+            How many times can you take $5$ from $25$?
+        }
+        \only<2>{
+            $1$. (Then it becomes $20$)
+        }
+        \end{textarea}
+    }
+\end{document}
